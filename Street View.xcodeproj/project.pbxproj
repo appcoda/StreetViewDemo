@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CB06E732E03ADE36F89FFD3 /* Pods_Street_View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9347504093C66013F34CC41A /* Pods_Street_View.framework */; };
 		F4BDFBD31F32CE0600F76034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDFBD21F32CE0600F76034 /* AppDelegate.swift */; };
 		F4BDFBD51F32CE0600F76034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDFBD41F32CE0600F76034 /* ViewController.swift */; };
 		F4BDFBD81F32CE0600F76034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BDFBD61F32CE0600F76034 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20F51845107DC3DDBDE1691A /* Pods-Street View.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street View.release.xcconfig"; path = "Pods/Target Support Files/Pods-Street View/Pods-Street View.release.xcconfig"; sourceTree = "<group>"; };
+		9347504093C66013F34CC41A /* Pods_Street_View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Street_View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC580DB12B593DE029E9B30C /* Pods-Street View.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Street View.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Street View/Pods-Street View.debug.xcconfig"; sourceTree = "<group>"; };
 		F4BDFBCF1F32CE0600F76034 /* Street View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Street View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BDFBD21F32CE0600F76034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BDFBD41F32CE0600F76034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB06E732E03ADE36F89FFD3 /* Pods_Street_View.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A92D5FF551A818CCDD7861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9347504093C66013F34CC41A /* Pods_Street_View.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		250345526D66120C4330910C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC580DB12B593DE029E9B30C /* Pods-Street View.debug.xcconfig */,
+				20F51845107DC3DDBDE1691A /* Pods-Street View.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4BDFBC61F32CE0600F76034 = {
 			isa = PBXGroup;
 			children = (
 				F4BDFBD11F32CE0600F76034 /* Street View */,
 				F4BDFBD01F32CE0600F76034 /* Products */,
+				250345526D66120C4330910C /* Pods */,
+				06A92D5FF551A818CCDD7861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4BDFBE11F32CE0600F76034 /* Build configuration list for PBXNativeTarget "Street View" */;
 			buildPhases = (
+				16A0F90E6781C3CCD6393A47 /* [CP] Check Pods Manifest.lock */,
 				F4BDFBCB1F32CE0600F76034 /* Sources */,
 				F4BDFBCC1F32CE0600F76034 /* Frameworks */,
 				F4BDFBCD1F32CE0600F76034 /* Resources */,
+				4C074AB7A4BF6A37BBE88283 /* [CP] Embed Pods Frameworks */,
+				EFA41EDD1B1FDD46B2D0EEEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16A0F90E6781C3CCD6393A47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C074AB7A4BF6A37BBE88283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Street View/Pods-Street View-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA41EDD1B1FDD46B2D0EEEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Street View/Pods-Street View-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4BDFBCB1F32CE0600F76034 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		F4BDFBE21F32CE0600F76034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC580DB12B593DE029E9B30C /* Pods-Street View.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Street View/Info.plist";
@@ -270,6 +346,7 @@
 		};
 		F4BDFBE31F32CE0600F76034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F51845107DC3DDBDE1691A /* Pods-Street View.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Street View/Info.plist";
